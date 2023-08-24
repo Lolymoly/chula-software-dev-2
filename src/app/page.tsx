@@ -4,11 +4,10 @@ import Card from "../../components/Card/page";
 import Banner from "../../components/Banner/page";
 
 export default function Home() {
-  return (
-    <>
-      Hello World
-      <Card />
-      <Banner />
-    </>
-  );
+	return (
+		<>
+			<Banner />
+			<Card />
+		</>
+	);
 }

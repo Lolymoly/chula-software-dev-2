@@ -1,10 +1,16 @@
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  /* copilot: remove background color by setting to foreground */
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+	color: rgb(var(--foreground-rgb));
+	margin: 0;
+	padding: 0;
+}
+
+/* set all text font to "Prompt" */
+* {
+	font-family: "Prompt", sans-serif;
 }
