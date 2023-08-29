@@ -1,11 +1,11 @@
 .banner {
-	height: 40vw;
+	min-height: 40vw;
 	width: 100%;
 
 	display: flex;
 	justify-content: center;
 	padding-top: 10vh;
-	margin-bottom: 5vw;
+	padding-bottom: 10vh;
 	overflow-y: hidden;
 }
 
@@ -20,9 +20,7 @@
 	display: flex;
 	flex-direction: column;
 	margin-top: 5vw;
-
 	margin-left: 10vw;
-	font-size: 2vw;
 }
 
 .bannerButtonDiv {
@@ -34,10 +32,10 @@
 .bannerButton {
 	background: #5eb2ba;
 	color: white;
-	padding: 0.5vw 1vw;
+	/* padding: 0.5vw 1vw; */
 	border: none;
-	border-radius: 1.2vw;
-	font-size: 1.1vw;
+	/* border-radius: 1.2vw; */
+	/* font-size: 1.1vw; */
 
 	cursor: pointer;
 	transition: background-color 0.2s ease; /* Add transition to background-color */
@@ -51,19 +49,16 @@
 	background-color: #46939b;
 }
 
-@media (max-width: 650px) {
-	.banner {
+/*@media (max-width: 650px) {
+	 .banner {
 		height: 50vw;
 		padding-top: 20vw;
 	}
-	.bannerText {
+	 .bannerText {
 		font-size: 2.8vw;
 		margin-left: 5vw;
-	}
-	.bannerButton {
-		font-size: 1.6vw;
-	}
+	} 
 	.bannerButtonDiv {
 		gap: 2vw;
 	}
-}
+}*/
