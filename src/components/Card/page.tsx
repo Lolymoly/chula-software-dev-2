@@ -28,8 +28,8 @@ export default function HospitalCard({
 	time = "Unknown",
 }: CardProps) {
 	return (
-		<Card className='flex-1 max-w-xs md:max-w-none'>
-			<CardHeader>
+		<Card className='flex-1 max-w-xs md:max-w-none md:self-stretch'>
+			<CardHeader className='md:min-h-[140px] cardlg:min-h-0'>
 				<CardTitle>{title}</CardTitle>
 				<CardDescription>{description}</CardDescription>
 			</CardHeader>
@@ -40,7 +40,6 @@ export default function HospitalCard({
 						className='object-center object-cover rounded-md mb-5'
 					/>
 				</div>
-
 				<div className='flex flex-col gap-[6px]'>
 					<CardDescription className='flex gap-2 items-center'>
 						<FaLocationDot size={14} />

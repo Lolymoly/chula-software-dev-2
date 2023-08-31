@@ -12,7 +12,7 @@ export default function Banner() {
 				/>
 			</div>
 			<div className={styles.bannerText}>
-				<h1 className='font-bold text-[18px] sm:text-[36px] lg:text-[3.5vw]'>
+				<h1 className='font-bold text-[5vw] sm:text-[36px] lg:text-[3.5vw]'>
 					จองวัคซีน COVID-19
 					<br />
 					ได้แล้ววันนี้!

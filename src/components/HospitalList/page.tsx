@@ -6,7 +6,7 @@ export default function HospitalList() {
 			<h1 className='flex justify-center font-semibold text-[5vw] sm:text-3xl md:text-4xl lg:text-5xl text-blue-800'>
 				โรงพยาบาลที่เข้าร่วมโครงการ
 			</h1>
-			<div className='flex flex-col items-center md:flex-row md:gap-6 gap-12 lg:px-16'>
+			<div className='flex flex-col items-center md:flex-row md:gap-6 gap-12 lg:px-16 px-4'>
 				<Card
 					title='โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย'
 					description='Chulalongkorn Hospital'
