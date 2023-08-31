@@ -1,15 +1,16 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Card from "@/components/Card/page";
+import Content1 from "@/components/Content1/page";
 import Banner from "@/components/Banner/page";
-import Hospital from "@/components/Hospital/page";
+import Card from "@/components/Card/page";
+import HospitalList from "@/components/HospitalList/page";
 
 export default function Home() {
 	return (
 		<>
-			{/* <Banner /> */}
-			{/* <Card /> */}
-			<Hospital />
+			<Banner />
+			<Content1 />
+			<HospitalList />
 		</>
 	);
 }
