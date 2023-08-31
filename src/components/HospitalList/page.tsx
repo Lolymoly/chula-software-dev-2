@@ -34,28 +34,28 @@ export default function HospitalList() {
 	};
 
 	const handleMouseDown = (e: MouseEvent<HTMLDivElement>) => {
-		// setIsDragging(true);
-		// setStartX(e.pageX - (containerRef.current?.offsetLeft || 0));
-		// setScrollLeft(containerRef.current?.scrollLeft || 0);
-		// if (containerRef.current) {
-		// 	containerRef.current.style.cursor = "grabbing";
-		// }
+		setIsDragging(true);
+		setStartX(e.pageX - (containerRef.current?.offsetLeft || 0));
+		setScrollLeft(containerRef.current?.scrollLeft || 0);
+		if (containerRef.current) {
+			containerRef.current.style.cursor = "grabbing";
+		}
 	};
 
 	const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-		// if (!isDragging) return;
-		// const x = e.pageX - (containerRef.current?.offsetLeft || 0);
-		// const walk = (x - startX) * 1.5; // Adjust scroll speed
-		// if (containerRef.current) {
-		// 	containerRef.current.scrollLeft = scrollLeft - walk;
-		// }
+		if (!isDragging) return;
+		const x = e.pageX - (containerRef.current?.offsetLeft || 0);
+		const walk = (x - startX) * 1.5; // Adjust scroll speed
+		if (containerRef.current) {
+			containerRef.current.scrollLeft = scrollLeft - walk;
+		}
 	};
 
 	const handleMouseUp = () => {
-		// setIsDragging(false);
-		// if (containerRef.current) {
-		// 	containerRef.current.style.cursor = "grab";
-		// }
+		setIsDragging(false);
+		if (containerRef.current) {
+			containerRef.current.style.cursor = "grab";
+		}
 	};
 	return (
 		<div className='bg-[#fffdfd] min-h-screen flex flex-col justify-center gap-16 py-[100px]'>
