@@ -4,13 +4,15 @@ import Content1 from "@/components/Content1/page";
 import Banner from "@/components/Banner/page";
 import Card from "@/components/Card/page";
 import HospitalList from "@/components/HospitalList/page";
+import Subscribe from "@/components/Subscribe/page";
 
 export default function Home() {
 	return (
 		<>
-			<Banner />
+			{/* <Banner />
 			<Content1 />
-			<HospitalList />
+			<HospitalList /> */}
+			<Subscribe />
 		</>
 	);
 }
