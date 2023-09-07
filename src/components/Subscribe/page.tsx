@@ -10,7 +10,7 @@ export default function Subscribe() {
 	const [isEmailValid, setIsEmailValid] = useState(true); // Initial state is valid
 	const [isCheckValid, setIsCheckValid] = useState(true); // Initial state is valid
 
-	const handleSubscribeClick = () => {
+	const handleSubscribeClick = async () => {
 		let ok = true;
 
 		// Validate email format
@@ -27,6 +27,15 @@ export default function Subscribe() {
 		} else setIsCheckValid(true);
 
 		if (!ok) return;
+
+		const res = await fetch("/api/email", {
+			method: "POST",
+			body: JSON.stringify({
+				firstName: email.split("@")[0],
+				email: email,
+			}),
+		});
+		console.log(res);
 	};
 
 	return (
