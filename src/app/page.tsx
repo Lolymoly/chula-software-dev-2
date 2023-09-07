@@ -9,9 +9,9 @@ import Subscribe from "@/components/Subscribe/page";
 export default function Home() {
 	return (
 		<>
-			{/* <Banner />
+			<Banner />
 			<Content1 />
-			<HospitalList /> */}
+			<HospitalList />
 			<Subscribe />
 		</>
 	);
