@@ -5,14 +5,16 @@ import Banner from "@/components/Banner/page";
 import Card from "@/components/Card/page";
 import HospitalList from "@/components/HospitalList/page";
 import Subscribe from "@/components/Subscribe/page";
+import BannerCycle from "@/components/BannerCycle/page";
 
 export default function Home() {
 	return (
 		<>
-			<Banner />
+			<BannerCycle />
+			{/* <Banner />
 			<Content1 />
 			<HospitalList />
-			<Subscribe />
+			<Subscribe /> */}
 		</>
 	);
 }
