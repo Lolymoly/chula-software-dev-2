@@ -1,35 +1,32 @@
-import Image from "next/image";
-import styles from "./banner.module.css";
+"use client";
+import { useState } from "react";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import IconButton from "@mui/material/IconButton";
 
 export default function Banner() {
-	return (
-		<div className={styles.banner}>
-			<div>
-				<img
-					src='/vaccinate-clipart.png'
-					alt='banner'
-					className={styles.bannerImage}
-				/>
-			</div>
-			<div className={styles.bannerText}>
-				<h1 className='font-bold text-[5vw] sm:text-[36px] lg:text-[3.5vw]'>
-					จองวัคซีน COVID-19
-					<br />
-					ได้แล้ววันนี้!
-				</h1>
-				<div className={styles.bannerButtonDiv}>
-					<button
-						className={`${styles.bannerButton} text-[7px] sm:text-xs md:text-base md:px-3 md:rounded-xl lg:py-[6px] px-[6px] sm:px-2 sm:py-1 py-[2.5px] rounded-lg`}
-					>
-						ลงทะเบียน
-					</button>
-					<button
-						className={`${styles.bannerButton} text-[7px] sm:text-xs md:text-base md:px-3 md:rounded-xl lg:py-[6px] px-[6px] sm:px-2 sm:py-1 py-[2.5px] rounded-lg`}
-					>
-						ค้นหาโรงพยาบาลใกล้บ้าน
-					</button>
-				</div>
-			</div>
-		</div>
-	);
+  const [index, setIndex] = useState(0);
+
+  return (
+    <div className="h-screen max-h-[100vw] bg-slate-50 flex justify-center items-center px-[5vw] md:px-[100px] py-[50px]  gap-2 md:gap-8">
+      <div>
+        <IconButton onClick={() => setIndex((index - 1 + 4) % 4)}>
+          <ChevronLeftIcon />
+        </IconButton>
+      </div>
+      <div className="max-w-[1000px] max-h-[80vh] self-center">
+        <img
+          src={`/banner_cycle/banner${index}.png`}
+          className="object-contain"
+          style={{ maxHeight: "80vh" }}
+          onClick={() => setIndex((index + 1) % 4)}
+        />
+      </div>
+      <div>
+        <IconButton onClick={() => setIndex((index + 1) % 4)}>
+          <ChevronRightIcon />
+        </IconButton>
+      </div>
+    </div>
+  );
 }
