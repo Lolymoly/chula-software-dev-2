@@ -1,9 +1,10 @@
 "use client";
 import Card from "@/components/Card/page";
+import { Rating } from "@mui/material";
 import { useRef, useState, MouseEvent, useEffect } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
-export default function HospitalList() {
+export default function CardPanel() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
