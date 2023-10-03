@@ -14,8 +14,10 @@ import Rating from "@mui/material/Rating";
 import { FaLocationDot, FaPhone, FaClock } from "react-icons/fa6";
 import InteractiveCard from "../InteractiveCard/page";
 import { SetStateAction, useState } from "react";
+import Link from "next/link";
 
 type CardProps = {
+	id: number;
 	title: string;
 	description: string;
 	image?: string;
@@ -28,6 +30,7 @@ type CardProps = {
 };
 
 export default function HospitalCard({
+	id,
 	title,
 	description,
 	image = "",
@@ -88,9 +91,11 @@ export default function HospitalCard({
 
 				<CardFooter className='flex justify-center gap-2'>
 					<Button className='select-none'>จองคิว</Button>
-					<Button variant='outline' className='select-none'>
-						ดูข้อมูล
-					</Button>
+					<Link href={`/hospital/${id}`}>
+						<Button variant='outline' className='select-none'>
+							ดูข้อมูล
+						</Button>
+					</Link>
 				</CardFooter>
 			</Card>
 		</InteractiveCard>

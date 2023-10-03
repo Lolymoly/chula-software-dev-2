@@ -17,6 +17,7 @@ export default function CardPanelNew() {
 	// mock hospital data
 	const hospitalList = [
 		{
+			id: 1,
 			title: "โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย",
 			description: "Chulalongkorn Hospital",
 			image: "/chula.jpg",
@@ -25,6 +26,7 @@ export default function CardPanelNew() {
 			time: "09:00 - 18:00",
 		},
 		{
+			id: 2,
 			title: "โรงพยาบาลราชวิถี",
 			description: "Rajavithi Hospital",
 			image: "/rajavithi.jpg",
@@ -33,6 +35,7 @@ export default function CardPanelNew() {
 			time: "09:00 - 24:00",
 		},
 		{
+			id: 3,
 			title: "โรงพยาบาลธรรมศาสตร์",
 			description: "Thammasat Hospital",
 			image: "/thammasat.jpg",
@@ -140,6 +143,7 @@ export default function CardPanelNew() {
 			>
 				{hospitalList.map((hospital, index) => (
 					<Card
+						id={hospital.id}
 						key={index}
 						title={hospital.title}
 						description={hospital.description}

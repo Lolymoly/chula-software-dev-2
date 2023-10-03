@@ -111,6 +111,7 @@ export default function CardPanel() {
 				className='flex flex-row items-center md:flex-row md:gap-6 gap-12 lg:px-16 px-4 overflow-hidden'
 			>
 				<Card
+					id={1}
 					title='โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย'
 					description='Chulalongkorn Hospital'
 					image='/chula.jpg'
@@ -124,6 +125,7 @@ export default function CardPanel() {
 					deleteRatingList={removeRating}
 				/>
 				<Card
+					id={2}
 					title='โรงพยาบาลราชวิถี'
 					description='Rajavithi Hospital'
 					image='/rajavithi.jpg'
@@ -137,6 +139,7 @@ export default function CardPanel() {
 					deleteRatingList={removeRating}
 				/>
 				<Card
+					id={3}
 					title='โรงพยาบาลธรรมศาสตร์'
 					description='Thammasat Hospital'
 					image='/thammasat.jpg'
