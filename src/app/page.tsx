@@ -6,15 +6,17 @@ import Card from "@/components/Card/page";
 import CardPanel from "@/components/CardPanel/page";
 import Subscribe from "@/components/Subscribe/page";
 import Banner from "@/components/Banner/page";
+import PromoteCard from "@/components/PromoteCard/page";
 
 export default function Home() {
-  return (
-    <>
-      <Banner />
-      <TextBanner />
-      <Content1 />
-      <CardPanel />
-      <Subscribe />
-    </>
-  );
+	return (
+		<>
+			<PromoteCard />
+			<Banner />
+			<TextBanner />
+			<Content1 />
+			<CardPanel />
+			<Subscribe />
+		</>
+	);
 }
