@@ -1,10 +1,23 @@
-import CardPanel from "@/components/CardPanel/page";
-import CardPanelNew from "@/components/CardPanelNew/page";
+import HospitalCatalog from "@/components/HospitalCatalog/page";
+import getHospitals from "@/libs/getHospitals";
+import { Suspense } from "react";
+import { LinearProgress } from "@mui/material";
 
 export default function HospitalPage() {
+	const hospitals = getHospitals();
 	return (
 		<>
-			<CardPanelNew />
+			<h1>โรงพยาบาลทั้งหมด</h1>
+			<Suspense
+				fallback={
+					<p>
+						Loading...
+						<LinearProgress />
+					</p>
+				}
+			>
+				<HospitalCatalog hospitalJson={hospitals} />
+			</Suspense>
 		</>
 	);
 }

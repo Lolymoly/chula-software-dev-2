@@ -1,15 +1,14 @@
 import Card from "@/components/Card/page";
 
-const HospitalCatalog = ({ hospitalJson }: { hospitalJson: Object }) => {
-	console.log(hospitalJson.data);
-
+const HospitalCatalog = async ({ hospitalJson }: { hospitalJson: Object }) => {
+	const hospitalJsonReady = await hospitalJson;
 	return (
 		<>
-			<div>Explore {hospitalJson.count} hospitals in our catalog</div>
+			<div>Explore {hospitalJsonReady.count} hospitals in our catalog</div>
 			<div className='flex flex-row items-center md:flex-row md:gap-6 gap-12 lg:px-16 px-4 overflow-hidden'>
-				{hospitalJson.data.map((hospital, index) => (
+				{hospitalJsonReady.data.map((hospital, index) => (
 					<Card
-						id={index + 1}
+						id={hospital.id}
 						key={index}
 						title={hospital.name}
 						description={hospital.province}
