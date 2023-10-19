@@ -77,15 +77,17 @@ export default function HospitalCard({
 							<FaClock size={14} />
 							{time}
 						</CardDescription>
-						<CardDescription className='flex gap-2 items-center mt-1'>
-							<ReviewsIcon style={{ fontSize: 14 }} />
-							<Rating
-								name='hospital-rating'
-								size='small'
-								value={rating}
-								onChange={(e, newRating) => changeRating(newRating)}
-							/>
-						</CardDescription>
+						{onChangeRating && (
+							<CardDescription className='flex gap-2 items-center mt-1'>
+								<ReviewsIcon style={{ fontSize: 14 }} />
+								<Rating
+									name='hospital-rating'
+									size='small'
+									value={rating}
+									onChange={(e, newRating) => changeRating(newRating)}
+								/>
+							</CardDescription>
+						)}
 					</div>
 				</CardContent>
 
