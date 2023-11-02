@@ -1,7 +1,5 @@
-import HospitalCatalog from "@/components/HospitalCatalog/page";
-import getHospitals from "@/libs/getHospitals";
+import AddHospitalForm from "@/components/AddHospitalForm.tsx/page";
 
 export default async function Temp() {
-	const hospitals = await getHospitals();
-	return <HospitalCatalog hospitalJson={hospitals} />;
+	return <AddHospitalForm />;
 }

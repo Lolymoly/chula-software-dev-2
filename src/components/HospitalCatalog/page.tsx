@@ -5,7 +5,7 @@ const HospitalCatalog = async ({ hospitalJson }: { hospitalJson: Object }) => {
 	return (
 		<>
 			<div>Explore {hospitalJsonReady.count} hospitals in our catalog</div>
-			<div className='flex flex-row items-center md:flex-row md:gap-6 gap-12 lg:px-16 px-4 overflow-hidden'>
+			<div className='flex flex-col flex-wrap items-center md:flex-row md:gap-6 gap-12 lg:px-16 px-4 overflow-hidden'>
 				{hospitalJsonReady.data.map((hospital, index) => (
 					<Card
 						id={hospital.id}
