@@ -17,7 +17,7 @@ import { SetStateAction, useState } from "react";
 import Link from "next/link";
 
 type CardProps = {
-	id: number;
+	id: number | string;
 	title: string;
 	description: string;
 	image?: string;

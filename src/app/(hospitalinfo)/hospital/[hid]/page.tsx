@@ -1,6 +1,8 @@
 import Card from "@/components/Card/page";
+import { Button } from "@/components/ui/button";
 import getHospital from "@/libs/getHospital";
 import { LinearProgress } from "@mui/material";
+import Link from "next/link";
 import { Suspense } from "react";
 
 export default async function HospitalPage({
@@ -24,6 +26,13 @@ export default async function HospitalPage({
 					<div className='font-normal text-sm text-gray-500'>
 						{hospital.data.tel}
 					</div>
+					<Link
+						href={`/booking?id=${params.hid}&hospital=${hospital.data.name}`}
+					>
+						<Button size='sm' className='mt-6'>
+							Make Reservation
+						</Button>
+					</Link>
 				</div>
 			</div>
 		</div>

@@ -12,6 +12,7 @@ import { useState } from "react";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers";
+import { useSearchParams } from "next/navigation";
 
 export default function BookingForm() {
 	const [num, setNum] = useState<any>();
@@ -32,6 +33,10 @@ export default function BookingForm() {
 		if (isNaN(numericValueAsNumber)) setNum("");
 		else setNum(numericValueAsNumber);
 	};
+
+	const urlParams = useSearchParams();
+	const hid = urlParams.get("id");
+	const hname = urlParams.get("hospital");
 
 	return (
 		<div className='px-10 lg:px-[100px]'>
@@ -100,6 +105,8 @@ export default function BookingForm() {
 					ลงทะเบียน
 				</Button>
 			</div>
+			{hid}
+			{hname}
 		</div>
 	);
 }
